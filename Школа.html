@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кам'янець-Подільська спеціальна школа</title>
+    <style>
+        /* Загальні стилі */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Шапка */
+        header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        /* Навігація */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px 0;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            color: #fff;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            color: #f8f9fa;
+            text-decoration: underline;
+        }
+
+        /* Вкладки */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+        .tab {
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .tab:hover {
+            background-color: #e9ecef;
+        }
+        .tab.active {
+            border-bottom: 2px solid #007bff;
+            color: #007bff;
+        }
+
+        /* Контент вкладок */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Основний контент */
+        main {
+            padding: 20px;
+        }
+        section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Футер */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 15px 10px;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #f8f9fa;
+        }
+
+        /* Адаптивність */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav li {
+                margin: 5px 0;
+            }
+            .tab {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Кам'янець-Подільська спеціальна школа<br>Хмельницької обласної ради</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Головна</a></li>
+                <li><a href="#">Про школу</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <ul class="tabs">
+            <li class="tab active" data-target="hero">Головна</li>
+            <li class="tab" data-target="about">Про школу</li>
+            <li class="tab" data-target="news">Новини</li>
+            <li class="tab" data-target="gallery">Галерея</li>
+        </ul>
+
+        <section id="hero" class="tab-content active">
+            <h2>Вітаємо на нашому сайті!</h2>
+            <p>Ми створили навчальне середовище, яке сприяє розвитку та адаптації дітей з особливими потребами.</p>
+        </section>
+
+        <section id="about" class="tab-content">
+            <h2>Про школу</h2>
+            <p>Кам'янець-Подільська спеціальна школа - це місце, де кожна дитина отримує підтримку для розкриття потенціалу.</p>
+        </section>
+
+        <section id="news" class="tab-content">
+            <h2>Останні новини</h2>
+            <ul>
+                <li><a href="#">Уроків не буде через карантин.</a></li>
+                <li><a href="#">Наша школа отримала нове обладнання для навчання.</a></li>
+            </ul>
+        </section>
+
+        <section id="gallery" class="tab-content">
+            <h2>Галерея</h2>
+            <p>Фото з нашого навчального закладу:</p>
+            <img src="https://scontent.frwn2-1.fna.fbcdn.net/v/t39.30808-6/458284558_3328656720776331_7367544808121921133_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=dTap15hH3eUQ7kNvgEhtojx&_nc_zt=23&_nc_ht=scontent.frwn2-1.fna&_nc_gid=AmDF9TLhlWmfG0si2D2tww5&oh=00_AYAC3xSVfk1E34Es6Kb6i5hDgoZJlO9vq38Xio3UZjW4dQ&oe=6763A69C" alt="Фото школи" style="width: 100%; border-radius: 8px;">
+        </section>
+    </main>
+
+    <footer>
+        <p>Телефон: <a href="tel:+380677508433">+38 (067) 750-84-33</a> | Email: <a href="mailto:davidonlayn@gmail.com">davidonlayn@gmail.com</a></p>
+        <p>&copy; 2024 Кам'янець-Подільська спеціальна школа</p>
+    </footer>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.dataset.target;
+
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(tc => tc.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
